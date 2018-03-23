@@ -1,0 +1,6 @@
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2_Kishan(config)#do show run
+Building configuration...
+end
+R2_Kishan#

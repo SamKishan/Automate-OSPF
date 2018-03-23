@@ -1,0 +1,10 @@
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2_Kishan(config)#do show ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            172.16.1.2      YES NVRAM  up                    up      
+FastEthernet1/0            198.51.101.2    YES NVRAM  up                    up      
+FastEthernet2/0            unassigned      YES NVRAM  administratively down down    
+Loopback1                  20.0.0.1        YES NVRAM  up                    up      
+R2_Kishan(config)#end
+R2_Kishan#

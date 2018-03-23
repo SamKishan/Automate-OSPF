@@ -1,0 +1,8 @@
++-------------+--------------+-----------------+
+| Neighbor ID |    State     |    Interface    |
++-------------+--------------+-----------------+
+|   3.3.3.3   | FULL/DROTHER | FastEthernet0/0 |
+|   4.4.4.4   |   FULL/BDR   | FastEthernet0/0 |
+|   1.1.1.1   |   FULL/DR    | FastEthernet1/0 |
+|   4.4.4.4   | FULL/DROTHER | FastEthernet1/0 |
++-------------+--------------+-----------------+

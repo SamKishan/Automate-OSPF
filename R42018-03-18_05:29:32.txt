@@ -1,0 +1,108 @@
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4_Kishan(config)#do show run
+Building configuration...
+
+Current configuration : 1092 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R4_Kishan
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+!
+!
+ip cef
+no ip domain lookup
+ip domain name r4_kishan.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+username samkishan privilege 15 secret 5 $1$q0Dm$XrB/bpkdfeawYs0JM5XEG/
+!
+!
+ip ssh version 2
+! 
+!
+!
+!
+!
+interface Loopback1
+ ip address 40.0.0.1 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 172.16.1.3 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ ip address 198.51.101.3 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+no ip http server
+no ip http secure-server
+ip route 198.51.100.0 255.255.255.0 FastEthernet1/0
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+end
+
+R4_Kishan(config)#end
+R4_Kishan#
